@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="https://brucardosocoder.github.io/unleshead_epica">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Unleashed - Epica">
+    <meta property="og:description" content="Unleashed - Epica">
+    <meta property="og:image" content="https://brucardosocoder.github.io/unleshead_epica/unleashedepicamobileog">   
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://brucardosocoder.github.io/unleshead_epica">
+    <meta property="twitter:url" content="https://brucardosocoder.github.io/unleshead_epica">
+    <meta name="twitter:title" content="Unleashed - Epica">
+    <meta name="twitter:description" content="Unleashed - Epica">
+    <meta name="twitter:image" content="https://brucardosocoder.github.io/unleshead_epica/unleashedepicamobileog">
+    <link rel="icon" href="unlesheadepica-16x16.ico" type="image/x-icon">
+    <link rel="icon" href="unlesheadepica-32x32.ico" type="image/x-icon">
+    <title>Unleashed - Epica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    
+        <header>
+            <div class="song-info">
+                    <h1><a href="" target="_blank"><img src="partitura.png" alt=""></a></h1>
+            </div>
+            <div class="header-center">
+                <div class="song-title">
+                    <h1>Unleashed</h1>
+                    <span class="song-meta">Epica</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="https://www.instagram.com/brucardoso.music" class="instagram-link" id="instagramLink" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+  
+        <main class="main-content">
+            <div class="audio-player">
+                <div class="track-list">                    
+                </div>
+            </div>
+        </main>
+
+      
+        <footer>
+            <div class="transport-controls">
+            <div class="transport-left">
+            
+                <div class="reset-section">
+                    <button class="reset-btn" id="resetBtn">Reset</button>
+                </div>
+            </div>
+            
+            <div class="transport-center">
+                <div class="playback-controls">
+                    <button class="transport-btn volume-btn" id="volumeBtn">🔊</button>
+                    <button class="transport-btn prev-btn" id="prevBtn">⏮</button>
+                    <button class="transport-btn play-btn" id="playBtn">▶</button>
+                    <button class="transport-btn next-btn" id="nextBtn">⏭</button>
+                    <button class="transport-btn loop-btn" id="loopBtn">🔁</button>
+                </div>
+                <div class="master-volume-control" style="display: none;">
+                    <span class="volume-label">Master</span>
+                    <input type="range" class="master-volume-slider" id="masterVolumeSlider" 
+                           min="0" max="100" value="70">
+                    <span class="volume-value" id="masterVolumeValue">70%</span>
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span id="totalTime">4:02</span>
+                </div>
+            </div>
+            
+            <div class="transport-right">
+        
+                <div class="speed-controls">
+                    <button class="speed-btn" data-speed="0.5">0.5x</button>
+                    <button class="speed-btn active" data-speed="1">1x</button>
+                    <button class="speed-btn" data-speed="2">2x</button>
+                </div>
+            </div>
+            </div>
+            <div class="brucardoso">
+    <p>&copy; 2026 Unleshea - Epica. Todos os direitos reservados. Desenvolvido por <a href="https://wa.me/5521989978029" target="_blank" class="underline">Bru Cardoso Coder.</a></p>
+</div>
+        </footer>
+
+        
+
+    </div>
+
+ 
+    <div class="shortcuts-help" id="shortcutsHelp" style="display: none;">
+        <div class="shortcuts-content">
+            <h3>Atalhos de Teclado</h3>
+            <ul>
+                <li><kbd>Espaço</kbd> - Play/Pause</li>
+                <li><kbd>←</kbd> - Retroceder 10s</li>
+                <li><kbd>→</kbd> - Avançar 10s</li>
+                <li><kbd>R</kbd> - Reset</li>
+                <li><kbd>M</kbd> - Mute/Unmute trilha selecionada</li>
+                <li><kbd>S</kbd> - Solo trilha selecionada</li>
+            </ul>
+            <button class="close-shortcuts" id="closeShortcuts">×</button>
+        </div>
+    </div>
+
+
+    <div class="score-modal" id="scoreModal" style="display: none;">
+        <div class="score-modal-content">
+            <div class="score-modal-header">
+                <h2 id="scoreModalTitle">Partitura</h2>
+                <div class="score-modal-controls">
+         
+                    <button class="score-control-btn" id="zoomOutBtn" title="Diminuir Zoom">-</button>
+                    <button class="score-control-btn" id="zoomInBtn" title="Aumentar Zoom">+</button>
+                    <button class="score-control-btn" id="fitToWidthBtn" title="Ajustar à Largura">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M3 9V5a2 2 0 0 1 2-2h4m10 0h4a2 2 0 0 1 2 2v4"/>
+                        </svg>
+                    </button>
+                    <button class="score-control-btn" id="scoreDownload" title="Baixar PDF">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </button>
+                    <button class="score-control-btn" id="scorePrint" title="Imprimir PDF">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 6,2 18,2 18,9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                    </button>
+                    <button class="score-control-btn" id="scoreFullscreen" title="Tela Cheia">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                        </svg>
+                    </button>
+                    <button class="score-close-btn" id="closeScoreModal" title="Fechar">×</button>
+                </div>
+            </div>
+            <div class="score-modal-body">
+                <div id="pdf-viewer-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+    <div id="pdf-navigation" style="display: none;">
+        <button id="pdf-prev" class="score-control-btn">‹</button>
+        <span id="pdf-page-num"></span> / <span id="pdf-page-count"></span>
+        <button id="pdf-next" class="score-control-btn">›</button>
+    </div>
+    <div id="pdf-loading" style="display: none; color: #fff;">Carregando partitura...</div>
+    <div id="pdf-error" class="score-error" style="display: none;">
+                    <p>Partitura não encontrada</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
