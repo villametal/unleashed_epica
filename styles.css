@@ -33,7 +33,6 @@ header {
     z-index: 1;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    z-index: 100;
 }
 
 header::before {
@@ -50,18 +49,21 @@ header::before {
     align-items: center;
     text-align: center;
     gap: 15px;
+    z-index: 1001;
 }
 
 .header-left {
     display: flex;
     align-items: center;
     gap: 15px;
+    z-index: 1001;
 }
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
+    z-index: 1001;
 }
 
 .instagram-link {
